@@ -2,39 +2,6 @@
 
 import UIKit
 
-enum Activity: CaseIterable {
-    case none
-    case low
-    case medium
-    case high
-    
-    var title: String {
-        switch self {
-        case .none:
-            return "None"
-        case .low:
-            return "Low"
-        case .medium:
-            return "Medium"
-        case .high:
-            return "High"
-        }
-    }
-    
-    var value: Int {
-        switch self {
-        case .none:
-            return 0
-        case .low:
-            return 50
-        case .medium:
-            return 150
-        case .high:
-            return 250
-        }
-    }
-}
-
 class HomeViewController: UIViewController {
     @IBOutlet weak var sexSegmentControl: UISegmentedControl!
     @IBOutlet weak var weightField: UITextField!
@@ -48,11 +15,21 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Calculator"
         configureSexSegmentControl()
         configureTextFields()
         configureActivityField()
-        
         weightField.becomeFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "activitySegue" {
+            if let activityController = segue.destination as? ActivitiesListViewController {
+                let activityIndex = self.pickerView.selectedRow(inComponent: 0)
+                let activity = self.activities[activityIndex]
+                activityController.activity = activity
+            }
+        }
     }
     
     @IBAction func calculateDidTap(_ sender: Any) {
@@ -85,6 +62,9 @@ class HomeViewController: UIViewController {
     func showAlertWith(title: String) {
         let alert = UIAlertController(title: "Your result", message: title, preferredStyle: .alert)
         alert.addAction(.init(title: "Ok", style: .cancel))
+        alert.addAction(.init(title: "Activity detail info", style: .default) { _ in
+            self.performSegue(withIdentifier: "activitySegue", sender: self)
+        })
         self.present(alert, animated: true)
     }
     
