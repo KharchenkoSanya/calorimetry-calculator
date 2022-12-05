@@ -43,19 +43,17 @@ class HomeViewController: UIViewController {
         let activityIndex = pickerView.selectedRow(inComponent: 0)
         let activity = activities[activityIndex]
         let activityValue = activity.value
-
-        let seletedSex = sexSegmentControl.selectedSegmentIndex
-
+        
+        guard let seletedSex = Sex(rawValue: sexSegmentControl.selectedSegmentIndex) else { return }
+        
         switch seletedSex {
-        case 0:
+        case .male:
             let result = Double(10 * weight) + (6.25 * Double(height)) - Double(5 * age) + 5.0 + Double(activityValue)
             showAlertWith(title: String(result))
             
-        case 1:
+        case .female:
             let result = Double(8 * weight) + (5.25 * Double(height)) - Double(5 * age) + 5.0 - 161.0 + Double(activityValue)
             showAlertWith(title: String(result))
-
-        default: ()
         }
     }
     
@@ -87,8 +85,8 @@ class HomeViewController: UIViewController {
     
     func configureSexSegmentControl() {
         sexSegmentControl.removeAllSegments()
-        sexSegmentControl.insertSegment(withTitle: "Male", at: 0, animated: false)
-        sexSegmentControl.insertSegment(withTitle: "Female", at: 1, animated: false)
+        sexSegmentControl.insertSegment(withTitle: Sex.male.title, at: 0, animated: false)
+        sexSegmentControl.insertSegment(withTitle: Sex.female.title, at: 1, animated: false)
         sexSegmentControl.selectedSegmentIndex = 0
     }
     

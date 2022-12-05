@@ -15,6 +15,7 @@
 		8D24947A293E1DEB009ACD36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D249478293E1DEB009ACD36 /* LaunchScreen.storyboard */; };
 		8DC217A0293E504A00A8EA86 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2179F293E504A00A8EA86 /* Activity.swift */; };
 		8DC217A2293E511200A8EA86 /* ActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC217A1293E511200A8EA86 /* ActivitiesListViewController.swift */; };
+		8DC217A4293E557000A8EA86 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC217A3293E557000A8EA86 /* Sex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8D24947B293E1DEB009ACD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2179F293E504A00A8EA86 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		8DC217A1293E511200A8EA86 /* ActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesListViewController.swift; sourceTree = "<group>"; };
+		8DC217A3293E557000A8EA86 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8D24947B293E1DEB009ACD36 /* Info.plist */,
 				8DC2179F293E504A00A8EA86 /* Activity.swift */,
 				8DC217A1293E511200A8EA86 /* ActivitiesListViewController.swift */,
+				8DC217A3293E557000A8EA86 /* Sex.swift */,
 			);
 			path = "Calorimetry Calculator";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				8D249472293E1DE9009ACD36 /* HomeViewController.swift in Sources */,
 				8DC217A2293E511200A8EA86 /* ActivitiesListViewController.swift in Sources */,
+				8DC217A4293E557000A8EA86 /* Sex.swift in Sources */,
 				8D24946E293E1DE9009ACD36 /* AppDelegate.swift in Sources */,
 				8DC217A0293E504A00A8EA86 /* Activity.swift in Sources */,
 				8D249470293E1DE9009ACD36 /* SceneDelegate.swift in Sources */,
