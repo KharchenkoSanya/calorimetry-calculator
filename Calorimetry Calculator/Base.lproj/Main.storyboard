@@ -239,27 +239,10 @@
                     <view key="view" contentMode="scaleToFill" id="L0D-OY-tXR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anA-pJ-9yh">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CRe-m3-eae"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="CRe-m3-eae" firstAttribute="trailing" secondItem="anA-pJ-9yh" secondAttribute="trailing" id="6fU-Nd-zdG"/>
-                            <constraint firstItem="anA-pJ-9yh" firstAttribute="leading" secondItem="CRe-m3-eae" secondAttribute="leading" id="9xG-6P-a1y"/>
-                            <constraint firstItem="anA-pJ-9yh" firstAttribute="top" secondItem="CRe-m3-eae" secondAttribute="top" id="Xql-BU-y0v"/>
-                            <constraint firstItem="CRe-m3-eae" firstAttribute="bottom" secondItem="anA-pJ-9yh" secondAttribute="bottom" id="iBh-2n-iVS"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ALO-TH-v56"/>
-                    <connections>
-                        <outlet property="label" destination="anA-pJ-9yh" id="GLW-TI-V3P"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiF-7m-usQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

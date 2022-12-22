@@ -22,16 +22,6 @@ class HomeViewController: UIViewController {
         weightField.becomeFirstResponder()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "activitySegue" {
-            if let activityController = segue.destination as? ActivitiesListViewController {
-                let activityIndex = self.pickerView.selectedRow(inComponent: 0)
-                let activity = self.activities[activityIndex]
-                activityController.activity = activity
-            }
-        }
-    }
-    
     @IBAction func calculateDidTap(_ sender: Any) {
         guard let weight = Int(weightField.text ?? ""),
               let height = Int(heightField.text ?? ""),
